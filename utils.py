@@ -3,6 +3,7 @@ from urllib.request import urlopen
 import urllib
 import json
 from .cache import Cache
+import os
 
 class TooManyRequestsError(ConnectionError): pass
 
@@ -28,7 +29,8 @@ TR_NO = 2
 trans_table = str.maketrans("abcçdefgğhıijklmnoöprşstuüvyz",
                             "ABCÇDEFGĞHIİJKLMNOÖPRŞSTUÜVYZ")
 
-cache = Cache("il_ve_ilçeler.pickle")
+
+cache = Cache(os.path.join(os.path.dirname(__file__), "il_ve_ilçeler.pickle"))
 
 def get_district(il, ilçe = None):
     if ilçe is None: ilçe = il
