@@ -21,7 +21,7 @@ Kütüphane bu API'yı kullanmaktadır: https://github.com/furkantektas/EzanVakt
 ## Aylık Namaz Vakitleri
 
 ```python
->>> len(namazvakti.aylık_namaz_vakitleri("istanbul")) # sadece ilçe vererek İstanbul'un merkezi değerlerini de alabiliriz
+>>> len(namazvakti.aylık_namaz_vakitleri("istanbul")) # sadece il vererek İstanbul'un merkezi değerlerini de alabiliriz
 31
 >>> namazvakti.aylık_namaz_vakitleri("istanbul")[:5]
 {('İSTANBUL', 'SİLİVRİ'): '9548', ('İSTANBUL', 'İSTANBUL'): '9541'}
