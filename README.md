@@ -1,6 +1,6 @@
 # Namaz Vakitleri için API istemcisi
 
-Kütüphane şu API'yı kullanmaktadır: https://github.com/furkantektas/EzanVaktiAPI
+Kütüphane bu API'yı kullanmaktadır: https://github.com/furkantektas/EzanVaktiAPI
 
 # Kullanım
 
@@ -13,7 +13,7 @@ Kütüphane şu API'yı kullanmaktadır: https://github.com/furkantektas/EzanVak
 ## Günlük Namaz Vakitleri 
 
 ```python
->>> namazvakti.günlük_namaz_vakitleri("istanbul", "silivri")
+>>> namazvakti.günlük_namaz_vakitleri("istanbul", "silivri") # il, ilçe
 {'Aksam': '20:10', 'AyinSekliURL': 'https://namazvakti.diyanet.gov.tr/images/sd6.gif', 'Gunes': '06:12', 'GunesBatis': '20:03', 'GunesDogus': '06:19', 'HicriTarihKisa': '27.12.1441', 'HicriTarihUzun': '27 Zilhicce 1441', 'Ikindi': '17:04', 'Imsak': '04:36', 'KibleSaati': '12:10', 'MiladiTarihKisa': '17.08.2020', 'MiladiTarihKisaIso8601': '17.08.2020', 'MiladiTarihUzun': '17 Ağustos 2020 Pazartesi', 'MiladiTarihUzunIso8601': '2020-08-17T00:00:00.0000000+03:00', 'Ogle': '13:16', 'Yatsi': '21:40'}
 >>>
 ````
@@ -21,7 +21,7 @@ Kütüphane şu API'yı kullanmaktadır: https://github.com/furkantektas/EzanVak
 ## Aylık Namaz Vakitleri
 
 ```python
->>> len(namazvakti.aylık_namaz_vakitleri("istanbul")) # sadece ilçe vererek istanbul merkezin değerlerini de alabiliriz
+>>> len(namazvakti.aylık_namaz_vakitleri("istanbul")) # sadece ilçe vererek İstanbul'un merkezi değerlerini de alabiliriz
 31
 >>> namazvakti.aylık_namaz_vakitleri("istanbul")[:5]
 {('İSTANBUL', 'SİLİVRİ'): '9548', ('İSTANBUL', 'İSTANBUL'): '9541'}
