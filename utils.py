@@ -2,7 +2,7 @@ from urllib.parse import urlencode
 from urllib.request import urlopen
 import urllib
 import json
-from cache import Cache
+from .cache import Cache
 
 class TooManyRequestsError(ConnectionError): pass
 
@@ -35,7 +35,6 @@ def get_district(il, ilçe = None):
     il, ilçe = il.translate(trans_table), ilçe.translate(trans_table)
     cache_value = cache.get((il, ilçe))
     if cache_value is not None:
-        print(cache)
         return cache_value
     
     iller = do_request(endpoints["şehirler"], {"ulke": TR_NO})

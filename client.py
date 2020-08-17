@@ -1,4 +1,4 @@
-from utils import do_request, get_district, endpoints
+from .utils import do_request, get_district, endpoints
 
 __all__ = ["aylık_namaz_vakitleri", "günlük_namaz_vakitleri", "ilçe_bayram_namazı_vakitleri"]
 
